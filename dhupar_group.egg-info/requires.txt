@@ -1,0 +1,4 @@
+erpnext
+frappe
+openpyxl
+simple_salesforce
