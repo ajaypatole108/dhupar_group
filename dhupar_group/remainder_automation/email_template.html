@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet"> -->
+    <title>Outstanding</title>
+
+    <style>
+        /* @font-face{
+            font-family: 'Montserrat', sans-serif;
+            src: url(/apps/remainders/remainders/remainder_automation/Font/Montserrat-Light.ttf);
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <table>
+        <tbody>
+            <tr>
+                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%">
+                    <strong>Total Invoice Amt : {{sum_inv_amt}}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%">
+                    <strong>Total Paid Amt : {{sum_paid_amt}}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%">
+                    <strong>Total Credit Amt : {{sum_cn_amt}}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%">
+                    <strong>Total Outstanding Amt : {{sum_outstanding_amt}}</strong>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+    <table style="border-right:rgb(15,17,15) 1px solid; border-top:rgb(15,17,15) 1px solid; font-size:8pt; border-left:rgb(15,17,15) 1px solid; width:100%; color:rgb(0,0,0); border-bottom:rgb(15,17,15) 1px solid;  border-collapse:collapse">
+        <tbody>
+            <tr style="background-color:#e6e6e6; text-align:center; height: 29.50pt; font-size: 17pt;">
+                <td style="border:1px solid black;border-collapse: collapse;width: 13in;font-family: 'Montserrat', sans-serif;">
+                    <strong>DHUPAR BROTHERS TRADING PVT. LTD. </strong>
+                </td>
+            </tr>
+
+            <!-- <tr style="height: 5pt;"></tr> -->
+
+            <tr>
+                <td style="border:1px solid black; border-collapse: collapse; text-align:center; padding: 5px; width: 13in;font-size: 9pt; font-family: 'Montserrat', sans-serif;">
+                    <strong>Authorised Distributors : L&T SWITCHGEARS, PHILIPS LIGHTING, LEGRAND, LAPP CABEL, RISHABH INSTRUMENTS, KEI,
+                         MINILEC, RITTAL, OMRON,<br> CG MOTORS, HAVELLS  & All Electrical Goods.</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="background-color:#e6e6e6; text-align:center; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif;">
+                    Shop no. 7, Panacea Lights, Tapkir Galli 753/54, Budhwar Peth, Near Phadke Haud, Budhwar Peth, Pune - 411 002
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center; border:1px solid black; border-collapse:collapse; padding:5px;font-family: 'Montserrat', sans-serif;">
+                    Mobile - 9922909183 &nbsp;,&nbsp; Email - accounts@dhuparbrothers.com
+                </td>
+            </tr>
+            
+            <tr >
+                <td style="background-color:#e6e6e6;text-align:center;font-size: 10pt ; height: 17pt;border:1px solid black;border-collapse: collapse;width: 13in;font-family: 'Montserrat', sans-serif;">
+                    <strong>BANK ACCOUNT DETAILS</strong>
+                </td>
+            </tr>
+
+            <tr style="text-align:center ;height: 56pt; font-size: 10pt;">
+                <td style="border:1px solid black;border-collapse: collapse;width: 13in;font-family: 'Montserrat', sans-serif;">
+                    Bank :  Kotak Mahindra Bank Limited<br>
+                    Branch :  Kalyaninagar Branch<br>
+                    A/C No :  688044000649<br>
+                    IFSC Code :  KKBK0001758
+                </td> 
+            </tr>
+
+            <tr style="background-color:#e6e6e6;font-weight: bold;text-align:center ; height: 17pt; font-size: 10pt;">
+                <td style="border:1px solid black;border-collapse: collapse;width: 13in;height: 20pt;font-family: 'Montserrat', sans-serif;">P A Y M E N T &nbsp;&nbsp; R E M A I N D E R</td> 
+            </tr>
+
+            <tr style="height: 30pt; font-size: 10pt;">
+                <td style="border:1px solid black;border-collapse: collapse;width: 13in; padding: 10px;font-size: 15px;font-family: 'Montserrat', sans-serif;">
+                    To,<br>
+                    <br aria-hidden="true">
+                    <strong>{{customer_name}}</strong><br>
+                </td>
+            </tr>
+
+            <tr style="background-color:#e6e6e6; font-weight: bold; text-align:center ;height: 17pt; font-size: 10pt;">
+                <td style="border:1px solid black;border-collapse: collapse; width: 13in;height: 20pt;font-family: 'Montserrat', sans-serif;">Pending&nbsp;&nbsp;Invoice&nbsp;&nbsp;Details</td>
+            </tr>
+
+            <tr >
+                <td style="border:1px solid black;border-collapse: collapse;width: 13in; height: 5pt;">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="border:1px solid black; border-collapse:collapse; padding:5px;">
+                    <table style="width:100%;  font-size:8pt; border:1px solid black; border-collapse:collapse">
+                        <tbody>
+                            <!-- Table heading -->
+                            <tr style="background-color:#e6e6e6;">
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Invoice No</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Invoice Date</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Po Number</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Po Date</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Due Date</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Age</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Invoice Amount</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Paid Amount</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Credit Note</strong>
+                                </td>
+
+                                <td style="border:1px solid black; border-collapse:collapse; padding:5px; text-align:center;  font-size:8pt; width:9%;font-family: 'Montserrat', sans-serif;">
+                                    <strong>Outstanding</strong>
+                                </td>
+                            </tr>
+                            {% for i in customer_outstanding %}
+                            <tr>
+                                {%if i.name%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    {{i.name}}
+                                </td>
+                                {%endif%}
+
+                                {%if i.posting_date%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    {{i.posting_date}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    
+                                </td>
+                                {%endif%}
+
+                                {%if i.po_no%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    {{i.po_no}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    
+                                </td>
+                                {%endif%}
+
+                                {%if i.po_date%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    {{i.po_date}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    
+                                </td>
+                                {%endif%}
+
+                                {%if i.due_date%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    {{i.due_date}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    
+                                </td>
+                                {%endif%}
+                                
+                                {%if i.age%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    {{i.age}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    
+                                </td>
+                                {%endif%}
+
+                                {%if i.base_rounded_total%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    &#x20b9; {{i.base_rounded_total}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+
+                                </td>
+                                {%endif%}
+
+                                {%if i.paid_amount%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    &#x20b9; {{i.paid_amount}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    
+                                </td>
+                                {%endif%}
+                                
+                                {%if i.cn_amount%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    &#x20b9; {{i.cn_amount}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    
+                                </td>
+                                {%endif%}
+                                
+                                {%if i.outstanding_amount%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px; font-family: 'Montserrat', sans-serif">
+                                    &#x20b9; {{i.outstanding_amount}}
+                                </td>
+                                {%else%}
+                                <td style="text-align:left;  color:black; width:9%; border:1px solid black; border-collapse:collapse; padding:5px">
+                                    
+                                </td>
+                                {%endif%}
+                            </tr>
+                            {% endfor %}
+                            
+                            <tr style="font-weight: bold; text-align:center ;height: 20pt; font-size: 8pt;">
+                                <td style="border:1px solid black;border-collapse: collapse; width: 13in; font-family: 'Montserrat', sans-serif">
+                                    <strong>Grand Total</strong>
+                                </td>
+
+                                <td></td> 
+                                <td></td> 
+                                <td></td> 
+                                <td></td> 
+                                <td></td> 
+                                
+                                <td style="text-align: left;border:1px solid black;border-collapse: collapse; width: 13in; font-family: 'Montserrat', sans-serif">
+                                    <strong> &#x20b9; {{ sum_inv_amt }}</strong>
+                                </td>
+
+                                <td style="text-align: left;border:1px solid black;border-collapse: collapse; width: 13in; font-family: 'Montserrat', sans-serif">
+                                    <strong> &#x20b9; {{ sum_paid_amt }}</strong>
+                                </td>
+
+                                <td style="text-align: left;border:1px solid black;border-collapse: collapse; width: 13in; font-family: 'Montserrat', sans-serif">
+                                    <strong> &#x20b9; {{ sum_cn_amt }}</strong>
+                                </td>
+
+                                <td style="text-align: left;border:1px solid black;border-collapse: collapse; width: 13in; font-family: 'Montserrat', sans-serif">
+                                    <strong> &#x20b9; {{ sum_outstanding_amt }}</strong>
+                                </td>
+                                
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
